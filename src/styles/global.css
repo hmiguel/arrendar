@@ -552,6 +552,17 @@ a {
   font-weight: 600;
 }
 
+.colophon__meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
 .colophon__meta {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -565,7 +576,6 @@ a {
   align-items: center;
   gap: 8px;
   width: fit-content;
-  margin-top: 4px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.05em;
