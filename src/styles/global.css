@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
   /* Bold Typography — fixed tokens, single visual world (does not respond to prefers-color-scheme) */
@@ -12,8 +12,8 @@
   --border-hover: #c9c7bf;
   --card: #f2f1ea;
 
-  --font-display: 'Inter Tight', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-serif: 'Fraunces', Georgia, serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
@@ -45,9 +45,11 @@ body {
   position: relative;
   z-index: 1;
   font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 400;
   color: var(--foreground);
   line-height: 1.6;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
   padding-inline: clamp(20px, 6vw, 64px);
   padding-block: calc(env(safe-area-inset-top, 0px) + 56px) calc(env(safe-area-inset-bottom, 0px) + 64px);
 }
@@ -56,8 +58,9 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   line-height: 1.1;
   text-wrap: balance;
   margin: 0;
@@ -415,6 +418,24 @@ a {
   line-height: 1.6;
   color: var(--muted-foreground);
   letter-spacing: -0.005em;
+}
+
+.ref__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted-foreground);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  transition: color 150ms cubic-bezier(0.25, 0, 0, 1);
+}
+
+.ref__source:hover {
+  color: var(--accent);
 }
 
 .pending {

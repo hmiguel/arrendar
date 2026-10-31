@@ -6,6 +6,8 @@ export interface LawRef {
   quote?: string;
   /** Short explanation, used when there's no single article to cite (e.g. a whole law or a mechanism). */
   note?: string;
+  /** Link to the official Diário da República page for the full text. Only set when verified. */
+  source?: string;
 }
 
 export interface DetailBlock {
@@ -47,6 +49,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1069.º',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 '1. O contrato de arrendamento urbano deve ser celebrado por escrito.\n2. Na falta de redução a escrito do contrato de arrendamento que não seja imputável ao arrendatário, este pode provar a existência de título por qualquer forma admitida em direito, demonstrando a utilização do locado pelo arrendatário sem oposição do senhorio e o pagamento mensal da respetiva renda por um período de seis meses.',
             },
@@ -63,8 +66,9 @@ export const stages: Stage[] = [
           ],
           refs: [
             {
-              label: 'Lei n.º 46/2006',
-              note: 'Lei geral que proíbe a discriminação em razão de origem racial ou étnica no acesso a bens e serviços, incluindo a habitação. Não é um artigo único, mas uma lei inteira.',
+              label: 'Lei n.º 93/2017',
+              source: 'https://diariodarepublica.pt/dr/detalhe/lei/93-2017-108038372',
+              note: 'Lei que proíbe a discriminação em razão de origem racial ou étnica, nacionalidade e ascendência no acesso a bens e serviços, incluindo a habitação. Não é um artigo único, mas uma lei inteira.',
             },
           ],
         },
@@ -80,6 +84,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Decreto-Lei n.º 555/99',
+              source: 'https://diariodarepublica.pt/dr/detalhe/decreto-lei/555-1999-655682',
               note: 'Regime Jurídico da Urbanização e Edificação (RJUE). Define as regras da licença de utilização. Não é um artigo único, mas um diploma inteiro.',
             },
           ],
@@ -104,6 +109,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1076.º, n.º 2',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'As partes podem caucionar, por qualquer das formas legalmente previstas, o cumprimento das obrigações respetivas, até ao valor correspondente a duas rendas.',
             },
@@ -122,6 +128,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1076.º, n.º 1',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote: 'O pagamento da renda pode ser antecipado, havendo acordo escrito, por período não superior a dois meses.',
             },
           ],
@@ -140,11 +147,13 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1095.º',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 '1. O prazo deve constar de cláusula inserida no contrato.\n2. O prazo referido no número anterior não pode ser inferior a um ano nem superior a trinta anos, sendo automaticamente alargado ou reduzido para esse limite mínimo ou máximo quando, respetivamente, for inferior ao primeiro ou superior ao segundo.',
             },
             {
               label: 'Código Civil, Art. 1096.º',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'Salvo estipulação em contrário, o contrato celebrado com prazo certo renova-se automaticamente no seu termo e por períodos sucessivos de igual duração ou de três anos se esta for inferior, sem prejuízo do disposto no número seguinte.',
             },
@@ -170,6 +179,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Coeficiente de atualização anual, NRAU',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2006-34578375',
               note: 'O coeficiente é publicado todos os anos pelo INE, com base na variação do índice de preços no consumidor. Não corresponde a um único artigo, mas a um mecanismo definido pelo NRAU (Lei n.º 6/2006).',
             },
           ],
@@ -186,6 +196,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1074.º, n.º 1',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'Cabe ao senhorio executar todas as obras de conservação, ordinárias ou extraordinárias, requeridas pelas leis vigentes ou pelo fim do contrato, salvo estipulação em contrário.',
             },
@@ -204,11 +215,13 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1038.º, als. f) e g)',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'São obrigações do locatário: (...) f) Não proporcionar a outrem o gozo total ou parcial da coisa por meio de cessão onerosa ou gratuita da sua posição jurídica, sublocação ou comodato, exceto se a lei o permitir ou o locador o autorizar; g) Comunicar ao locador, dentro de quinze dias, a cedência do gozo da coisa por algum dos referidos títulos, quando permitida ou autorizada.',
             },
             {
               label: 'Código Civil, Art. 1083.º, n.º 1 e 2',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'Qualquer das partes pode resolver o contrato, nos termos gerais de direito, com base em incumprimento pela outra parte. É fundamento de resolução o incumprimento que, pela sua gravidade ou consequências, torne inexigível à outra parte a manutenção do arrendamento.',
             },
@@ -227,15 +240,18 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código do IRS, Art. 115.º',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2014-70048167',
               note: 'Obriga quem recebe rendas (categoria F) a emitir recibo eletrónico no Portal das Finanças para cada pagamento, incluindo caução e adiantamentos.',
             },
             {
               label: 'Código do IRS, Art. 78.º-E',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2014-70048167',
               quote:
                 'São dedutíveis à coleta 15% das importâncias, líquidas de subsídios ou comparticipações oficiais, suportadas a título de renda por contrato de arrendamento de habitação permanente, com o limite fixado anualmente na lei do Orçamento do Estado.',
             },
             {
               label: 'Código do IRS, Art. 72.º',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2014-70048167',
               note: 'Fixa a taxa autónoma de tributação das rendas recebidas pelo senhorio (categoria F), atualmente 25%, com reduções para contratos longos ou rendas moderadas.',
             },
           ],
@@ -265,6 +281,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1079.º',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote: 'O arrendamento urbano cessa por acordo das partes, resolução, caducidade, denúncia ou outras causas previstas na lei.',
             },
           ],
@@ -281,6 +298,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1101.º (excerto)',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'O senhorio pode denunciar o contrato de duração indeterminada nos casos seguintes: a) Necessidade de habitação pelo próprio ou pelos seus descendentes em 1.º grau; b) Para demolição ou realização de obra de remodelação ou restauro profundos; (...) entre outros fundamentos previstos na lei.',
             },
@@ -298,6 +316,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'NRAU, Arts. 15.º a 15.º-S',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/lei/2006-34578375',
               note: 'Regulam o procedimento especial de despejo, conduzido pelo Balcão do Arrendatário e do Senhorio (BAS). Vários artigos, não um único.',
             },
           ],
@@ -317,6 +336,7 @@ export const stages: Stage[] = [
           refs: [
             {
               label: 'Código Civil, Art. 1043.º, n.º 1',
+              source: 'https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/1966-34509075',
               quote:
                 'Na falta de convenção, o locatário é obrigado a manter e restituir a coisa no estado em que a recebeu, ressalvadas as deteriorações inerentes a uma prudente utilização, em conformidade com os fins do contrato.',
             },

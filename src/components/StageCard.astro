@@ -46,6 +46,20 @@ const padded = String(stage.number).padStart(2, '0');
                     {r.quote &&
                       r.quote.split('\n').map((line) => <p class="ref__quote">{line}</p>)}
                     {r.note && <p class="ref__note">{r.note}</p>}
+                    {r.source && (
+                      <a class="ref__source" href={r.source} target="_blank" rel="noopener noreferrer">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M4 11L12 4l8 7M6 10v9h12v-9"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        Ver no Diário da República
+                      </a>
+                    )}
                   </div>
                 </details>
               ))}
