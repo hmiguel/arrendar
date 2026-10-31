@@ -199,12 +199,18 @@ export const stages: Stage[] = [
           paragraphs: [
             'O inquilino não pode sublocar o imóvel, cedê-lo a terceiros, ou ceder a sua posição no contrato, sem autorização escrita do senhorio, salvo nos casos previstos na lei.',
             'Quando a sublocação é permitida ou autorizada, o inquilino deve comunicá-la ao senhorio no prazo de 15 dias.',
+            'Isto também importa a quem vai para uma casa subarrendada: se for você a mudar-se através de alguém que não é o senhorio direto, vale a pena confirmar que essa sublocação foi autorizada por escrito pelo proprietário. Uma sublocação feita sem autorização é ilegal e dá ao senhorio motivo para terminar o contrato principal, o que deixa quem lá vive, muitas vezes sem saber da situação, em risco de ter de sair sem aviso prévio.',
           ],
           refs: [
             {
               label: 'Código Civil, Art. 1038.º, als. f) e g)',
               quote:
                 'São obrigações do locatário: (...) f) Não proporcionar a outrem o gozo total ou parcial da coisa por meio de cessão onerosa ou gratuita da sua posição jurídica, sublocação ou comodato, exceto se a lei o permitir ou o locador o autorizar; g) Comunicar ao locador, dentro de quinze dias, a cedência do gozo da coisa por algum dos referidos títulos, quando permitida ou autorizada.',
+            },
+            {
+              label: 'Código Civil, Art. 1083.º, n.º 1 e 2',
+              quote:
+                'Qualquer das partes pode resolver o contrato, nos termos gerais de direito, com base em incumprimento pela outra parte. É fundamento de resolução o incumprimento que, pela sua gravidade ou consequências, torne inexigível à outra parte a manutenção do arrendamento.',
             },
           ],
         },
