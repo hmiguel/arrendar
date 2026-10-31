@@ -85,5 +85,38 @@ const canonicalUrl = siteOrigin + strings.canonicalPath;
         </a>
       </footer>
     </div>
+
+    <script>
+      document.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        const btn = target.closest('.highlight__anchor') as HTMLButtonElement | null;
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        const details = btn.closest('details.highlight');
+        if (!details || !details.id) return;
+        const url = `${location.origin}${location.pathname}#${details.id}`;
+        navigator.clipboard?.writeText(url).then(() => {
+          btn.classList.add('copied');
+          setTimeout(() => btn.classList.remove('copied'), 1500);
+        });
+      });
+
+      function openFromHash() {
+        const id = decodeURIComponent(location.hash.slice(1));
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (!el) return;
+        let node: HTMLElement | null = el;
+        while (node) {
+          if (node instanceof HTMLDetailsElement) node.open = true;
+          node = node.parentElement;
+        }
+        requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      }
+
+      openFromHash();
+      window.addEventListener('hashchange', openFromHash);
+    </script>
   </body>
 </html>

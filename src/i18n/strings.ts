@@ -14,6 +14,7 @@ export interface UiStrings {
   pendingLabel: string;
   viewFullArticle: string;
   unofficialTranslationLabel: string;
+  copyLinkLabel: string;
   disclaimerStrong: string;
   disclaimerRest: string;
   sourcesText: string; // contains no markup
@@ -41,6 +42,7 @@ export const pt: UiStrings = {
   pendingLabel: 'Em discussão: ainda não é lei',
   viewFullArticle: 'Ver artigo completo',
   unofficialTranslationLabel: 'Tradução não oficial',
+  copyLinkLabel: 'Copiar link desta secção',
   disclaimerStrong: 'Isto não é aconselhamento jurídico.',
   disclaimerRest:
     'Em caso de dúvida sobre o seu contrato, consulte um advogado ou o Balcão do Arrendatário e do Senhorio (BAS).',
@@ -70,6 +72,7 @@ export const en: UiStrings = {
   pendingLabel: "Under discussion: not law yet",
   viewFullArticle: 'View full article',
   unofficialTranslationLabel: 'Unofficial translation',
+  copyLinkLabel: 'Copy link to this section',
   disclaimerStrong: 'This is not legal advice.',
   disclaimerRest:
     "If you're unsure about your contract, consult a lawyer or the Tenant and Landlord Counter (Balcão do Arrendatário e do Senhorio, BAS).",

@@ -322,7 +322,7 @@ a {
   cursor: pointer;
   list-style: none;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
   align-items: baseline;
   gap: 16px;
   padding-block: 18px;
@@ -330,6 +330,31 @@ a {
   font-size: 1.05rem;
   letter-spacing: -0.01em;
   transition: color 150ms cubic-bezier(0.25, 0, 0, 1);
+}
+
+.highlight__anchor {
+  background: none;
+  border: none;
+  padding: 4px;
+  margin: -4px;
+  color: var(--border-hover);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.25, 0, 0, 1), color 150ms cubic-bezier(0.25, 0, 0, 1);
+}
+
+.highlight:hover .highlight__anchor,
+.highlight__anchor:focus-visible {
+  opacity: 1;
+}
+
+.highlight__anchor:hover {
+  color: var(--accent);
+}
+
+.highlight__anchor.copied {
+  opacity: 1;
+  color: var(--accent);
 }
 
 .highlight__summary::-webkit-details-marker {

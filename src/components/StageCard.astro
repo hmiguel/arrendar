@@ -1,6 +1,7 @@
 ---
 import type { Stage } from '../data/stages';
 import type { UiStrings } from '../i18n/strings';
+import { slugify } from '../utils/slugify';
 
 interface Props {
   stage: Stage;
@@ -26,10 +27,21 @@ const padded = String(stage.number).padStart(2, '0');
   <div class="stage__body">
     {
       stage.highlights.map((h) => (
-        <details class="highlight">
+        <details class="highlight" id={slugify(h.text)}>
           <summary class="highlight__summary">
             <span class="highlight__mark" aria-hidden="true" />
             <span>{h.text}</span>
+            <button type="button" class="highlight__anchor" aria-label={strings.copyLinkLabel}>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M10 14a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5M14 10a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </summary>
           <div class="highlight__detail">
             <h3>{h.detail.title}</h3>
