@@ -1,13 +1,15 @@
 ---
 import type { Stage } from '../data/stages';
+import type { UiStrings } from '../i18n/strings';
 
 interface Props {
   stage: Stage;
   open?: boolean;
   total: number;
+  strings: UiStrings;
 }
 
-const { stage, open = false, total } = Astro.props;
+const { stage, open = false, total, strings } = Astro.props;
 const padded = String(stage.number).padStart(2, '0');
 ---
 
@@ -15,7 +17,7 @@ const padded = String(stage.number).padStart(2, '0');
   <summary class="stage__summary">
     <span class="stage__num" aria-hidden="true">{padded}</span>
     <span class="stage__headline">
-      <h2><span class="sr-only">Fase {stage.number} de {total}: </span>{stage.title}</h2>
+      <h2><span class="sr-only">{strings.stageSrLabel(stage.number, total)}</span>{stage.title}</h2>
       <span class="stage__subtitle">{stage.subtitle}</span>
     </span>
     <span class="stage__toggle" aria-hidden="true"></span>
@@ -34,7 +36,7 @@ const padded = String(stage.number).padStart(2, '0');
             {h.detail.paragraphs.map((p) => <p>{p}</p>)}
             {h.detail.pending && (
               <div class="pending">
-                <span class="pending__label">Em discussão: ainda não é lei</span>
+                <span class="pending__label">{strings.pendingLabel}</span>
                 <p>{h.detail.pending}</p>
               </div>
             )}
@@ -45,6 +47,12 @@ const padded = String(stage.number).padStart(2, '0');
                   <div class="ref__text">
                     {r.quote &&
                       r.quote.split('\n').map((line) => <p class="ref__quote">{line}</p>)}
+                    {r.quoteTranslation && (
+                      <div class="ref__translation">
+                        <span class="ref__translation-label">{strings.unofficialTranslationLabel}</span>
+                        {r.quoteTranslation.split('\n').map((line) => <p class="ref__quote">{line}</p>)}
+                      </div>
+                    )}
                     {r.note && <p class="ref__note">{r.note}</p>}
                     {r.source && (
                       <a class="ref__source" href={r.source} target="_blank" rel="noopener noreferrer">
@@ -57,7 +65,7 @@ const padded = String(stage.number).padStart(2, '0');
                             stroke-linejoin="round"
                           />
                         </svg>
-                        Ver artigo completo
+                        {strings.viewFullArticle}
                       </a>
                     )}
                   </div>

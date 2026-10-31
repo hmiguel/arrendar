@@ -4,6 +4,8 @@ export interface LawRef {
   label: string;
   /** Legal text quoted as it appears in the law. Omitted when the reference doesn't correspond to a single citable article. */
   quote?: string;
+  /** Unofficial English rendering of `quote`, shown alongside it on the English site only. The quote itself stays in Portuguese, since that's the actual law. */
+  quoteTranslation?: string;
   /** Short explanation, used when there's no single article to cite (e.g. a whole law or a mechanism). */
   note?: string;
   /** Link to the official Diário da República page for the full text. Only set when verified. */

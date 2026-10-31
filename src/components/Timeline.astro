@@ -1,12 +1,20 @@
 ---
-import { stages } from '../data/stages';
+import type { Stage } from '../data/stages';
+import type { UiStrings } from '../i18n/strings';
 import StageCard from './StageCard.astro';
+
+interface Props {
+  stages: Stage[];
+  strings: UiStrings;
+}
+
+const { stages, strings } = Astro.props;
 ---
 
-<ol class="timeline" aria-label="Fases do arrendamento">
+<ol class="timeline" aria-label={strings.timelineAriaLabel}>
   {stages.map((stage, i) => (
     <li>
-      <StageCard stage={stage} open={i === 0} total={stages.length} />
+      <StageCard stage={stage} open={i === 0} total={stages.length} strings={strings} />
     </li>
   ))}
 </ol>
