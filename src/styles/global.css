@@ -487,6 +487,26 @@ a {
   color: var(--muted-foreground);
 }
 
+.colophon__github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  transition: color 150ms cubic-bezier(0.25, 0, 0, 1);
+}
+
+.colophon__github:hover {
+  color: var(--accent);
+}
+
 @media (max-width: 480px) {
   .stage__body {
     padding-left: 0;
