@@ -327,6 +327,23 @@ export const stages: Stage[] = [
         },
       },
       {
+        text: 'Inquilinos idosos ou com deficiência têm proteção reforçada',
+        detail: {
+          title: 'Proteção de arrendatários idosos ou com deficiência',
+          paragraphs: [
+            'Em contratos antigos (celebrados antes de 1990) ou em contratos com prazo certo celebrados antes de fevereiro de 2019, se o inquilino tiver 65 anos ou mais, ou uma deficiência com grau de incapacidade igual ou superior a 60%, e viver na casa há pelo menos 15 ou 20 anos (consoante o caso), o senhorio só pode denunciar o contrato ou opor-se à renovação para realizar obras profundas de remodelação ou restauro, e mesmo assim tem de garantir o realojamento do inquilino durante as obras.',
+            'Esta proteção reforçada não se aplica à generalidade dos contratos novos. Se tiver dúvidas sobre se o seu contrato está abrangido, vale a pena procurar aconselhamento jurídico, por exemplo junto do Balcão do Arrendatário e do Senhorio (BAS).',
+          ],
+          refs: [
+            {
+              label: 'Lei n.º 13/2019',
+              source: 'https://informador.pt/legislacao/diploma/lei-n-o-13-2019/',
+              note: 'Reforça a estabilidade do arrendamento e a proteção de arrendatários idosos ou com deficiência, através dos artigos 9.º-B e 10.º-A do NRAU, entre outros. Não é um artigo único, mas uma lei inteira.',
+            },
+          ],
+        },
+      },
+      {
         text: 'O inquilino também tem de avisar com antecedência',
         detail: {
           title: 'Denúncia pelo inquilino',

@@ -319,6 +319,23 @@ export const stagesEn: Stage[] = [
         },
       },
       {
+        text: 'Elderly or disabled tenants have stronger protection',
+        detail: {
+          title: 'Protection for elderly or disabled tenants',
+          paragraphs: [
+            "In old contracts (signed before 1990) or fixed-term contracts signed before February 2019, if the tenant is 65 or older, or has a certified disability of 60% or more, and has lived there for at least 15 or 20 years (depending on the case), the landlord can only terminate the contract or oppose its renewal to carry out major renovation or restoration work, and even then has to arrange the tenant's temporary rehousing during the work.",
+            "This stronger protection doesn't apply to most new contracts. If you're unsure whether your contract is covered, it's worth getting legal advice, for example from the Tenant and Landlord Counter (BAS).",
+          ],
+          refs: [
+            {
+              label: 'Lei n.º 13/2019',
+              source: 'https://informador.pt/legislacao/diploma/lei-n-o-13-2019/',
+              note: 'Strengthens tenancy stability and protection for elderly or disabled tenants, through Arts. 9.º-B and 10.º-A of the NRAU, among others. Not a single article, but a whole law.',
+            },
+          ],
+        },
+      },
+      {
         text: 'The tenant also has to give advance notice',
         detail: {
           title: "Tenant's termination notice",
