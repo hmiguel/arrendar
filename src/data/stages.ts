@@ -306,6 +306,31 @@ export const stages: Stage[] = [
         },
       },
       {
+        text: 'O inquilino também tem de avisar com antecedência',
+        detail: {
+          title: 'Denúncia pelo inquilino',
+          paragraphs: [
+            'Num contrato de duração indeterminada, o inquilino pode terminá-lo a qualquer momento, sem justificar, depois de viver na casa há pelo menos 6 meses. O prazo de aviso depende de há quanto tempo já lá vive: 120 dias se já forem um ano ou mais, ou 60 dias se for há menos tempo.',
+            'Num contrato com prazo certo, o inquilino pode terminá-lo mais cedo depois de cumprido um terço da duração, com o mesmo aviso de 120 ou 60 dias consoante a duração do contrato. Também pode opor-se à renovação automática, avisando com pelo menos 120 dias de antecedência do fim do prazo.',
+            'Não cumprir o prazo de aviso não impede a saída, mas obriga o inquilino a pagar ao senhorio a renda correspondente aos dias de aviso em falta.',
+          ],
+          refs: [
+            {
+              label: 'Código Civil, Art. 1100.º',
+              source: 'https://informador.pt/legislacao/lexit/codigos/direito-civil/codigo-civil/livro-ii-direito-das-obrigacoes/titulo-ii-dos-contratos-em-especial/capitulo-iv-locacao/seccao-vii-arrendamento-de-predios-urbanos/subseccao-vii-disposicoes-especiais-do-arrendamento-para-habitacao/divisao-ii-duracao/subdivisao-ii-contrato-de-duracao-indeterminada/artigo-1100-o-denuncia-pelo-arrendatario/',
+              quote:
+                'Decorridos seis meses de duração efetiva do contrato, o arrendatário pode denunciá-lo, independentemente de qualquer motivo, mediante comunicação ao senhorio com a antecedência mínima seguinte: a) 120 dias do termo pretendido do contrato, se, à data da comunicação, a duração efetiva do contrato for igual ou superior a um ano; b) 60 dias do termo pretendido do contrato, se, à data da comunicação, a duração efetiva do contrato for inferior a um ano.',
+            },
+            {
+              label: 'Código Civil, Art. 1098.º',
+              source: 'https://informador.pt/legislacao/lexit/codigos/direito-civil/codigo-civil/livro-ii-direito-das-obrigacoes/titulo-ii-dos-contratos-em-especial/capitulo-iv-locacao/seccao-vii-arrendamento-de-predios-urbanos/subseccao-vii-disposicoes-especiais-do-arrendamento-para-habitacao/divisao-ii-duracao/subdivisao-i-contrato-com-prazo-certo/artigo-1098-o-oposicao-a-renovacao-ou-denuncia-pelo-arrendatario/',
+              quote:
+                '1. O arrendatário pode impedir a renovação automática mediante comunicação ao senhorio com a antecedência mínima de 120 dias do termo do contrato.\n2. Decorrido um terço da duração inicial do contrato ou da sua renovação, o arrendatário pode denunciá-lo a todo o tempo, mediante comunicação ao senhorio com a antecedência mínima seguinte: a) 120 dias do termo pretendido do contrato, se a duração deste for igual ou superior a um ano; b) 60 dias do termo pretendido do contrato, se a duração deste for inferior a um ano.',
+            },
+          ],
+        },
+      },
+      {
         text: 'Falta de pagamento pode levar a despejo',
         detail: {
           title: 'Incumprimento e despejo',
