@@ -1,0 +1,78 @@
+---
+import Timeline from '../components/Timeline.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia do Arrendamento Habitacional</title>
+    <meta
+      name="description"
+      content="O essencial da lei do arrendamento habitacional em Portugal, explicado em português simples, com detalhe legal para quem quiser aprofundar."
+    />
+    <link rel="canonical" href="https://arrendar.hmiguel.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arrendar.hmiguel.dev/" />
+    <meta property="og:title" content="Guia do Arrendamento Habitacional" />
+    <meta
+      property="og:description"
+      content="O essencial da lei do arrendamento habitacional em Portugal, explicado em português simples, com detalhe legal para quem quiser aprofundar."
+    />
+    <meta property="og:locale" content="pt_PT" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#fafaf8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'Guia do Arrendamento Habitacional',
+      description:
+        'O essencial da lei do arrendamento habitacional em Portugal, explicado em português simples, com detalhe legal para quem quiser aprofundar.',
+      url: 'https://arrendar.hmiguel.dev/',
+      inLanguage: 'pt-PT',
+      about: [
+        { '@type': 'Legislation', name: 'Lei n.º 6/2006 (Novo Regime do Arrendamento Urbano)' },
+        { '@type': 'Legislation', name: 'Lei n.º 56/2023 (Mais Habitação)' },
+      ],
+    })} />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    <div class="page">
+      <header class="hero">
+        <span class="hero__eyebrow">Guia do arrendamento habitacional</span>
+        <span class="hero__bar" aria-hidden="true"></span>
+        <h1 class="hero__title">O que diz a lei portuguesa sobre arrendar casa, em português simples.</h1>
+      </header>
+
+      <div class="notice">
+        <span class="notice__label">Em discussão</span>
+        <p>
+          Em julho de 2026, o Governo aprovou em Conselho de Ministros uma proposta para mudar esta lei,
+          mas ainda tem de passar pelo Parlamento. Pode alterar a <strong>caução</strong>, os
+          <strong>prazos de denúncia</strong> e a <strong>atualização de rendas antigas</strong>. Esta
+          página mostra a lei atualmente em vigor e assinala, em cada ponto, o que pode vir a mudar.
+        </p>
+      </div>
+
+      <main id="conteudo">
+        <Timeline />
+      </main>
+
+      <footer class="colophon">
+        <p>
+          <strong>Isto não é aconselhamento jurídico.</strong> Em caso de dúvida sobre o seu contrato,
+          consulte um advogado ou o Balcão do Arrendatário e do Senhorio (BAS).
+        </p>
+        <p>
+          Fontes: Código Civil (Arts. 1069.º–1113.º), Lei n.º 6/2006 (Novo Regime do Arrendamento Urbano),
+          Lei n.º 56/2023 (Mais Habitação).
+        </p>
+        <p class="colophon__meta">Última revisão · outubro de 2026</p>
+      </footer>
+    </div>
+  </body>
+</html>

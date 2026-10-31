@@ -1,0 +1,12 @@
+---
+import { stages } from '../data/stages';
+import StageCard from './StageCard.astro';
+---
+
+<ol class="timeline" aria-label="Fases do arrendamento">
+  {stages.map((stage, i) => (
+    <li>
+      <StageCard stage={stage} open={i === 0} total={stages.length} />
+    </li>
+  ))}
+</ol>

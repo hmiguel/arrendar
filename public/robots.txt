@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arrendar.hmiguel.dev/sitemap.xml

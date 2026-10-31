@@ -1,0 +1,58 @@
+---
+import type { Stage } from '../data/stages';
+
+interface Props {
+  stage: Stage;
+  open?: boolean;
+  total: number;
+}
+
+const { stage, open = false, total } = Astro.props;
+const padded = String(stage.number).padStart(2, '0');
+---
+
+<details class="stage" open={open}>
+  <summary class="stage__summary">
+    <span class="stage__num" aria-hidden="true">{padded}</span>
+    <span class="stage__headline">
+      <h2><span class="sr-only">Fase {stage.number} de {total}: </span>{stage.title}</h2>
+      <span class="stage__subtitle">{stage.subtitle}</span>
+    </span>
+    <span class="stage__toggle" aria-hidden="true"></span>
+  </summary>
+
+  <div class="stage__body">
+    {
+      stage.highlights.map((h) => (
+        <details class="highlight">
+          <summary class="highlight__summary">
+            <span class="highlight__mark" aria-hidden="true" />
+            <span>{h.text}</span>
+          </summary>
+          <div class="highlight__detail">
+            <h3>{h.detail.title}</h3>
+            {h.detail.paragraphs.map((p) => <p>{p}</p>)}
+            {h.detail.pending && (
+              <div class="pending">
+                <span class="pending__label">Em discussão: ainda não é lei</span>
+                <p>{h.detail.pending}</p>
+              </div>
+            )}
+            <div class="refs">
+              {h.detail.refs.map((r) => (
+                <details class="ref">
+                  <summary class="ref__summary">{r.label}</summary>
+                  <div class="ref__text">
+                    {r.quote &&
+                      r.quote.split('\n').map((line) => <p class="ref__quote">{line}</p>)}
+                    {r.note && <p class="ref__note">{r.note}</p>}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</details>
