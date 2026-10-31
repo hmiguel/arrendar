@@ -186,6 +186,25 @@ export const stages: Stage[] = [
         },
       },
       {
+        text: 'Um atraso pontual tem penalização, não despejo imediato',
+        detail: {
+          title: 'Atraso no pagamento da renda',
+          paragraphs: [
+            'Se pagar a renda com atraso, mas regularizar a situação dentro de 8 dias a contar do início do atraso, não há qualquer penalização.',
+            'Passado esse prazo, o senhorio pode exigir, além da renda em atraso, uma indemnização de 20% sobre o valor em dívida. Pagar a renda junto com essa indemnização elimina a situação de incumprimento (chama-se "purgar a mora").',
+            'Só atrasos graves ou repetidos, como visto noutro ponto desta página, dão ao senhorio o direito de terminar o contrato.',
+          ],
+          refs: [
+            {
+              label: 'Código Civil, Art. 1041.º',
+              source: 'https://informador.pt/legislacao/lexit/codigos/direito-civil/codigo-civil/livro-ii-direito-das-obrigacoes/titulo-ii-dos-contratos-em-especial/capitulo-iv-locacao/seccao-iii-obrigacoes-do-locatario/subseccao-ii-pagamento-da-renda-ou-aluguer/artigo-1041-o-mora-do-locatario/',
+              quote:
+                'Constituído o locatário em mora, o locador tem direito a exigir, além da renda ou aluguer em atraso, uma indemnização igual a 20% do que for devido, salvo se o contrato for resolvido com base na falta de pagamento. O direito a essa indemnização ou à resolução do contrato cessa, porém, logo que o locatário faça cessar a mora, pagando ou depositando a renda ou aluguer em atraso, desde que o faça no prazo de oito dias a contar do seu início.',
+            },
+          ],
+        },
+      },
+      {
         text: 'As obras de conservação são, em regra, do senhorio',
         detail: {
           title: 'Obras e reparações',
